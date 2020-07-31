@@ -2,19 +2,20 @@ package m1.s22;
 
 public class AboutStringBuilder {
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder();
-        StringBuilder sb2 = new StringBuilder(20);
+        //Modi per creare uno StringBuilder
+    	StringBuilder sb = new StringBuilder();
+        StringBuilder sb2 = new StringBuilder(20); //dimensione dello StringBuilder: alloco spazio in memoria
         StringBuilder sb3 = new StringBuilder("hello");
         
         System.out.println("capacity 1: " + sb.capacity());
         System.out.println("capacity 2: " + sb2.capacity());
         System.out.println("capacity 3: " + sb3.capacity());
         
-        System.out.println("appending: " + sb3.append(' ').append("world"));
+        System.out.println("appending: " + sb3.append(' ').append("world")); //si possono usare più append di seguito
         
         System.out.println("char at position 1 in sb3 is '" + sb3.charAt(1) + "'");
         
-        System.out.println("deleting: " + sb3.delete(5, 10).deleteCharAt(2));
+        System.out.println("deleting: " + sb3.delete(5, 10).deleteCharAt(2)); //anche i delete si posso usare in coda
         
         System.out.println("index of \"elo\": " + sb3.indexOf("elo"));
         
