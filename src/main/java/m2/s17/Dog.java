@@ -7,10 +7,11 @@ public class Dog {
 	private String name;
 	private int weight;
 
+	//I primi tre costruttori richiamano il costruttore base
 	public Dog() {
 		this(DEFAULT_NAME, DEFAULT_WEIGHT);
 	}
-
+	
 	public Dog(String name) {
 		this(name, DEFAULT_WEIGHT);
 	}
@@ -18,9 +19,10 @@ public class Dog {
 	public Dog(int weight) {
 		this(DEFAULT_NAME, weight);
 	}
-
+	
+	//Caso normale
 	public Dog(String name, int weight) {
-		this.name = name;
+		this.name = name; //si associa alla proprietà name dell'oggetto corrente la stringa name
 		this.weight = weight;
 	}
 
