@@ -7,6 +7,7 @@ public class Pet {
         this.name = name;
     }
 
+    //Getter -> accedono a proprietà private
     public String getName() {
         return name;
     }
