@@ -7,7 +7,8 @@ public class Main {
 //        group[0] = new Fox();
 //        group[1] = new Dog();
 //        group[2] = new Robot();
-
+    	
+    	// Altro modo di inizializzare l'array:
         Barker[] barkers = { new Fox(), new Dog(), new Robot() };
 
         for (Barker aBarker : barkers) {

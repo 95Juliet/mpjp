@@ -2,7 +2,7 @@ package m2.s05;
 
 public class Wrapper {
     public static void main(String[] args) {
-        System.out.println(Boolean.class);
+        System.out.println(Boolean.class); //la proprietà class è una rappresentazione della classe stessa
         System.out.println(Character.class);
         System.out.println(Byte.class);
         System.out.println(Short.class);

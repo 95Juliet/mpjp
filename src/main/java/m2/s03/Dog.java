@@ -1,7 +1,7 @@
 package m2.s03;
 
 public class Dog {
-    String name;
+    String name; //parte dati della classe
 
     public Dog() {
         name = "No name";

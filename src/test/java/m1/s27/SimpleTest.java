@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 class SimpleTest {
     private Simple simple;
 
-    @BeforeEach
+    @BeforeEach //per non ripetere sempre Simple
     public void init() {
         simple = new Simple();
     }

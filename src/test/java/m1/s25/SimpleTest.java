@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 
 class SimpleTest {
 
-    @Test
+    @Test //annotazione che permette di riconoscere che è un test: è necessaria
     void negate() {
-        fail("Not yet implemented");
+        fail("Not yet implemented"); //fail è un metodo statico della classe Assertions
     }
 }
