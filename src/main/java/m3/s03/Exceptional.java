@@ -46,6 +46,6 @@ public class Exceptional {
         } catch (Exception e) {
             //Stampa la storia dell'eccezione
         	e.printStackTrace();
-        }
+        } //finally non è obbligatorio
     }
 }
