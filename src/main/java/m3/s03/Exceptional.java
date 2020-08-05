@@ -1,14 +1,16 @@
 package m3.s03;
 
 public class Exceptional {
-    public void f() {
+    //Il metodo f() chiama il metodo g()
+	public void f() {
         // ...
 
         // ...
         try {
             g();
         } catch (Exception ex) {
-            System.out.println("Exception caught");
+            //Avviso per aver incontrato l'eccezione di tipo Exception
+        	System.out.println("Exception caught");
         } finally {
             cleanup();
         }
@@ -16,11 +18,13 @@ public class Exceptional {
 
     public void g() throws Exception {
         // ...
+    	//somethingUnexpected() ritorna sempre true
         if (somethingUnexpected()) {
             throw new Exception();
         }
     }
-
+    
+    //Questo metodo viene sempre eseguito
     private void cleanup() {
         System.out.println("performing cleanup");
     }
@@ -30,13 +34,18 @@ public class Exceptional {
     }
 
     public static void main(String[] args) {
-        Exceptional exceptional = new Exceptional();
-        exceptional.f();
+        //Creazione oggetto di tipo Exceptional, cioè della classe stessa che contiene il main
+    	Exceptional exceptional = new Exceptional();
+        //Chiamata metodo f() sull'oggetto appena creato
+    	exceptional.f();
 
+    	//Diversa gestione dell'eccezione
         try {
             exceptional.g();
+            //g() tira l'eccezione
         } catch (Exception e) {
-            e.printStackTrace();
+            //Stampa la storia dell'eccezione
+        	e.printStackTrace();
         }
     }
 }
