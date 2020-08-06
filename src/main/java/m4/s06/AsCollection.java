@@ -27,6 +27,8 @@ public class AsCollection {
 
         System.out.println("The collection has " + coll.size() + " elements");
 
+        //Stampa di tutti gli oggetti nella collezione
+        //Chiamata del metodo iterator sulla collezione
         Iterator<Integer> it = coll.iterator();
         System.out.print("{ ");
         while (it.hasNext()) {
@@ -36,6 +38,7 @@ public class AsCollection {
 
         coll.remove(-5);
 
+        //La collezione viene trasformata in un array del tipo corretto
         Integer[] values = coll.toArray(new Integer[coll.size()]);
         System.out.println(Arrays.toString(values));
 
