@@ -13,10 +13,13 @@ public class AsQueue {
             System.out.println("18 has been added");
         }
 
+        //Ritorna il primo elemento o un'eccezione se la queue è vuota
         System.out.println("The first element in queue (or throws): " + q.element());
+        //Ritorna il primo elemento o null se la queue è vuota
         System.out.println("Again, the first element (or null): " + q.peek());
 
         System.out.println("Remove (or throws): " + q.remove());
+        //Rimuove il primo elemento o restituisce null se la queue è vuota
         System.out.println("Poll (or null): " + q.poll());
     }
 
