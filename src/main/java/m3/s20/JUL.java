@@ -20,17 +20,24 @@ public class JUL {
     }
 
     public static void main(String[] args) {
-        Locale.setDefault(new Locale("en", "EN"));
+        //Creazione nuovo Locale per cambiare lingua
+    	Locale.setDefault(new Locale("en", "EN"));
         Logger log = Logger.getLogger("sample");
 
+        //Con questa chiamata si ha la stampa solo da info in poi
         someLog();
 
+        //Configurazione: viene impostato di stampare tutto
+        //Il livello di stampa può essere impostato: da tutto a nulla
         ConsoleHandler handler = new ConsoleHandler();
         handler.setLevel(Level.ALL);
         log.setLevel(Level.ALL);
         log.addHandler(handler);
         log.setUseParentHandlers(false);
 
+        //Ora vengono stampati tutti da finest
         someLog();
+        
+        //Solitamente il Log è agganciato a un File
     }
 }
