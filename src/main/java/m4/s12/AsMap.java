@@ -9,12 +9,15 @@ public class AsMap {
     public static void main(String[] args) {
         Map<Integer, String> map = aMap();
 
-        System.out.println("contains key 12: " + map.containsKey(12));
-        System.out.println("contains value seven: " + map.containsValue("seven"));
+        System.out.println("contains key 12: " + map.containsKey(12)); //O(1) o O(log n)
+        System.out.println("contains value seven: " + map.containsValue("seven")); //O(n)
 
+        //Set delle coppie chiave-valore
+        //Qui risuta comodo usare il tipo var
         Set<Map.Entry<Integer, String>> items = map.entrySet();
         for (Map.Entry<Integer, String> item : items) {
-            item.setValue(item.getValue() + "!");
+            //Cambio del valore con l'aggiunta di un punto esclamativo
+        	item.setValue(item.getValue() + "!");
         }
 
         Iterator<Map.Entry<Integer, String>> it = items.iterator();
@@ -26,6 +29,7 @@ public class AsMap {
         System.out.println("Value for key -1 (or null): " + map.get(-1));
         System.out.println("Value for key -1 (or default): " + map.getOrDefault(-1, "missing"));
 
+        //Questometodo ritorna un set che rappresenta tutte le chiavi
         Set<Integer> keys = map.keySet();
         for (Integer key : keys) {
             System.out.println(key + ": " + map.get(key));
@@ -47,7 +51,8 @@ public class AsMap {
     }
 
     private static Map<Integer, String> aMap() {
-        Map<Integer, String> result = new HashMap<>();
+        //Questa mappa è una rappresentazione intero -> stringa non ordinata
+    	Map<Integer, String> result = new HashMap<>();
         result.put(7, "seven");
         result.put(12, "twelve");
         result.put(23, "twentythree");
